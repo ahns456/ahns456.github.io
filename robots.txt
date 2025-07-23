@@ -1,0 +1,7 @@
+User-agent: Google-adsbot
+Disallow:
+
+User-agent: *
+Allow: /
+
+Sitemap: https://vibeforge.asia/sitemap.xml
