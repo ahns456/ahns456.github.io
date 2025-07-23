@@ -18,34 +18,32 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      min-height: 100vh;
       text-align: center;
     }
     img {
-      width: 180px;
+      width: 300px;
       height: auto;
-      margin-bottom: 24px;
+      margin-bottom: 32px;
     }
     h1 {
-      font-size: 2.5em;
-      margin: 0 20px;
-      max-width: 90%;
+      font-size: 3.5em;
+      margin: 0;
     }
     p {
-      font-size: 1.2em;
-      color: #cccccc;
-      max-width: 600px;
-      margin: 20px;
+      font-size: 1.5em;
+      margin-top: 16px;
+      color: #bbbbbb;
     }
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
+      img {
+        width: 200px;
+      }
       h1 {
-        font-size: 1.8em;
+        font-size: 2.2em;
       }
       p {
-        font-size: 1em;
-      }
-      img {
-        width: 120px;
+        font-size: 1.1em;
       }
     }
   </style>
