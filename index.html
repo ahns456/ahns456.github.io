@@ -1,56 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>VIBEFORGE</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
     body {
       margin: 0;
-      padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #0f0f0f;
-      color: #f5f5f5;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
+      background-color: #121212;
+      color: #ffffff;
       text-align: center;
     }
-    img {
-      width: 300px;
-      height: auto;
-      margin-bottom: 32px;
+    .header-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: contain;
+      background-color: #ffffff;
+      padding: 40px 0;
+    }
+    .container {
+      padding: 40px 20px;
     }
     h1 {
-      font-size: 3.5em;
-      margin: 0;
+      font-size: 2.8em;
+      margin-top: 0;
     }
     p {
-      font-size: 1.5em;
-      margin-top: 16px;
-      color: #bbbbbb;
+      font-size: 1.3em;
+      color: #cccccc;
+      margin-bottom: 40px;
     }
-    @media (max-width: 768px) {
-      img {
-        width: 200px;
+    .app-preview {
+      width: 200px;
+      height: 200px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      margin-bottom: 24px;
+    }
+    .play-button {
+      background-color: #1DB954;
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      padding: 14px 26px;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+    .play-button:hover {
+      background-color: #1aa34a;
+    }
+    @media (max-width: 600px) {
+      .app-preview {
+        width: 150px;
+        height: 150px;
       }
       h1 {
-        font-size: 2.2em;
+        font-size: 2em;
       }
       p {
-        font-size: 1.1em;
+        font-size: 1em;
       }
     }
   </style>
 </head>
 <body>
-  <img src="vibeforge_header_image.png" alt="VIBEFORGE Logo">
-  <h1>VIBEFORGE</h1>
-  <p>Forging the Future of Software at VIBEFORGE.</p>
+  <!-- 헤더 이미지 -->
+  <img src="vibeforge_header_image.png" alt="VIBEFORGE 헤더 이미지" class="header-image">
+
+  <div class="container">
+    <h1>VIBEFORGE</h1>
+    <p>Forging the Future of Software at VIBEFORGE.</p>
+
+    <!-- 앱 아이콘 -->
+    <img src="app_icon.png" alt="AlertCoin 앱 아이콘" class="app-preview">
+    <p><strong>코인 가격 알림 앱 - 머선129</strong></p>
+
+    <!-- 버튼 -->
+    <a href="https://play.google.com/store/apps/details?id=com.vibeforge.alertcoin&hl=ko" class="play-button" target="_blank">
+      Google Play에서 보기
+    </a>
+  </div>
 </body>
 </html>
