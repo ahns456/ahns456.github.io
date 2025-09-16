@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Privacy Policy</title>
+  <style>
+    :root{--w:880px}
+    body{max-width:var(--w);margin:48px auto;padding:0 20px;line-height:1.75;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Inter,Noto Sans,Apple SD Gothic Neo,Malgun Gothic,sans-serif}
+    h1{font-size:1.9rem;margin-bottom:.5rem}
+    h2{font-size:1.25rem;margin-top:2.2rem;margin-bottom:.6rem}
+    hr{margin:1.6rem 0}
+    table{width:100%;border-collapse:collapse;margin:12px 0}
+    th,td{border:1px solid #ddd;padding:.6rem;vertical-align:top}
+    th{background:#fafafa;text-align:left}
+    small{color:#666}
+    ul{margin:.4rem 0 .8rem 1.2rem}
+    p{margin:.4rem 0}
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy</h1>
+  <p><strong>Last updated:</strong> September 16, 2025</p>
+  <p>This policy explains what data our AI-based photo organization/optimization application (the “App”) processes, for what purposes, which third-party services it may use, required permissions, security measures, and your choices.</p>
+
+  <hr>
+
+  <h2>1. Personal Data Collection & Use</h2>
+  <p>The App has no sign-up or login feature and <strong>does not collect or transmit directly identifying personal data</strong> such as your name, email address, or phone number to external servers.<br>
+  Original photos (image data), EXIF location information, and facial feature data are <strong>not uploaded</strong> to any server.</p>
+
+  <h2>2. Data Processed (On-Device Only)</h2>
+  <p>The following data is generated/stored/used <strong>only on your device</strong> to provide photo classification and cleanup features.</p>
+
+  <table>
+    <thead>
+      <tr><th>Category</th><th>Items</th><th>Description</th><th>External Transfer</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Photo metadata</td><td>Internal ID, file size, captured (estimated) time, URI</td><td>From MediaStore queries</td><td>None</td></tr>
+      <tr><td>Hashes</td><td>Perceptual hash (pHash)</td><td>Duplicate detection (irreversible; cannot reconstruct originals)</td><td>None</td></tr>
+      <tr><td>Classification labels</td><td>DUPLICATE / BLUR / LARGE / DOCUMENT / UNKNOWN</td><td>On-device ML/rule results</td><td>None</td></tr>
+      <tr><td>App settings</td><td>Theme, scan options, ads/notifications toggles</td><td>User convenience</td><td>None</td></tr>
+      <tr><td>Scan progress</td><td>Processed count, progress</td><td>UI display / resume processing</td><td>None</td></tr>
+      <tr><td>(Optional) Usage events*</td><td>Feature usage patterns, screen views</td><td>Stability/quality improvement (when Firebase is enabled)</td><td>Pseudonymous to Firebase</td></tr>
+      <tr><td>(Optional) Advertising ID</td><td>Google Advertising ID</td><td>Personalized/non-personalized ads (AdMob)</td><td>Sent by AdMob SDK</td></tr>
+    </tbody>
+  </table>
+  <p><em>*If analytics collection is disabled in the App or OS settings, such data is not sent.</em></p>
+
+  <h2>3. Purposes of Use</h2>
+  <table>
+    <thead><tr><th>Purpose</th><th>Details</th></tr></thead>
+    <tbody>
+      <tr><td>Photo cleanup/optimization</td><td>Automatic grouping of duplicates, blurry shots, large files, and document candidates</td></tr>
+      <tr><td>Storage management</td><td>Help you identify items for deletion/cleanup</td></tr>
+      <tr><td>UX continuity</td><td>Store settings and latest scan state locally</td></tr>
+      <tr><td>(Optional) Quality improvement</td><td>Error/flow insights based on pseudonymous events</td></tr>
+      <tr><td>(Optional) Advertising</td><td>Show personalized or non-personalized ads based on your choice</td></tr>
+    </tbody>
+  </table>
+
+  <h2>4. Third-Party Services & Disclosures</h2>
+  <p>The App may use the services below. We do not provide directly identifying data.</p>
+  <table>
+    <thead><tr><th>Service</th><th>Purpose</th><th>Possible Data Sent (examples)</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Google AdMob</td><td>Advertising</td><td>Advertising ID, device/OS info, basic app usage stats</td><td>Personalized ads can be limited at device/App level</td></tr>
+      <tr><td>Google Play services / FCM (optional)</td><td>Notifications, stability</td><td>Push token (pseudonymous), basic device info</td><td>For important notices/feature updates</td></tr>
+      <tr><td>Firebase Analytics (optional)</td><td>Usage analytics</td><td>Event names and simple parameters (pseudonymous)</td><td>No name/email collection</td></tr>
+      <tr><td>Google ML Kit (on-device)</td><td>Blur/document etc. classification</td><td>None (on-device processing)</td><td>No external image upload</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Ad personalization:</strong> You can reset the Ad ID or limit ad personalization in device settings (e.g., Android), and an in-app “Disable personalized ads” toggle (if provided) takes precedence.</p>
+
+  <h2>5. Retention & Deletion</h2>
+  <table>
+    <thead><tr><th>Item</th><th>Where stored</th><th>Deletion timing</th></tr></thead>
+    <tbody>
+      <tr><td>Hashes/labels/metadata</td><td>App local DB (e.g., Room)</td><td>Upon app uninstall or when you run “Delete scan data”</td></tr>
+      <tr><td>App settings</td><td>Local SharedPreferences/DB</td><td>On app uninstall or settings reset</td></tr>
+      <tr><td>Progress cache</td><td>Temporary memory/DB</td><td>Cleaned after scan completion or app restart</td></tr>
+      <tr><td>(Optional) Analytics events</td><td>Firebase</td><td>Subject to Firebase retention policies (pseudonymous)</td></tr>
+    </tbody>
+  </table>
+  <p>You may remove local data via in-app options such as “Reset data” or “Delete scan results” (if provided).</p>
+
+  <h2>6. App Permissions</h2>
+  <table>
+    <thead><tr><th>Permission</th><th>Purpose</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>READ_MEDIA_IMAGES (or READ_EXTERNAL_STORAGE, per SDK)</td><td>Read photo list/metadata</td><td>Required to scan targets</td></tr>
+      <tr><td>POST_NOTIFICATIONS (optional)</td><td>Progress/completion notifications</td><td>Shows scan status</td></tr>
+      <tr><td>FOREGROUND_SERVICE / DATA_SYNC</td><td>Reliable background scanning</td><td>Complies with platform policies</td></tr>
+      <tr><td>INTERNET</td><td>Ads/SDK connectivity</td><td>No upload of original photos</td></tr>
+      <tr><td>VIBRATE (optional)</td><td>Notification vibration</td><td>User experience</td></tr>
+    </tbody>
+  </table>
+  <p>Permissions are not used for any purpose other than stated above.</p>
+
+  <h2>7. Security</h2>
+  <ul>
+    <li>No server transmission of originals/EXIF/content</li>
+    <li>pHash is irreversible and cannot be back-calculated</li>
+    <li>All network communications use HTTPS</li>
+    <li>Principle of least privilege and regular library updates</li>
+    <li>No storage/transmission of sensitive originals minimizes exposure risk</li>
+  </ul>
+
+  <h2>8. Changes to This Policy</h2>
+  <ol>
+    <li>Material changes will be disclosed in App release notes or settings</li>
+    <li>Important updates may also be notified via in-app notices</li>
+    <li>The latest version is always available at this URL</li>
+  </ol>
+
+  <h2>9. Contact</h2>
+  <table>
+    <thead><tr><th>Item</th><th>Details</th></tr></thead>
+    <tbody>
+      <tr><td>Data Protection Officer</td><td>Seyun Ahn</td></tr>
+      <tr><td>Email</td><td>vibeforgesoft@gmail.com</td></tr>
+      <tr><td>Support channel</td><td>In-app “Send feedback”</td></tr>
+    </tbody>
+  </table>
+
+  <h2>10. On-Device Machine Learning</h2>
+  <ul>
+    <li>All classifications (duplicates/blur/document/large) are computed on the device</li>
+    <li>No external upload of image originals, thumbnails, or EXIF location</li>
+    <li>Hashes/labels are pseudonymous/irreversible and must not be used for re-identification</li>
+    <li>No separate detection of child/sensitive imagery is performed</li>
+  </ul>
+
+  <h2>11. Ad Personalization & Opt-Out</h2>
+  <table>
+    <thead><tr><th>Control</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>OS settings</td><td>Reset Advertising ID / limit ad personalization</td></tr>
+      <tr><td>In-app setting (if provided)</td><td>“Disable personalized ads” toggle</td></tr>
+      <tr><td>Network-level (advanced)</td><td>Use DNS/firewall according to your device policy</td></tr>
+      <tr><td>Opt-out effect</td><td>Personalized → contextual/general ads</td></tr>
+    </tbody>
+  </table>
+
+  <h2>12. Your Choices</h2>
+  <table>
+    <thead><tr><th>Item</th><th>How to change</th></tr></thead>
+    <tbody>
+      <tr><td>Delete scan data</td><td>Use “Delete scan results” in the App, or uninstall the App</td></tr>
+      <tr><td>Disable notifications</td><td>OS permission settings or in-app toggle</td></tr>
+      <tr><td>Limit ad personalization</td><td>Device settings and in-app toggle</td></tr>
+      <tr><td>Disable analytics</td><td>In-app setting (if provided) or OS-level limit</td></tr>
+    </tbody>
+  </table>
+
+  <h2>13. Legal Basis (as applicable by region)</h2>
+  <ul>
+    <li><strong>Legitimate interests:</strong> storage optimization and provision of core functionality</li>
+    <li><strong>Consent:</strong> personalized advertising and optional usage analytics</li>
+    <li>You may withdraw consent at any time (some features may be limited after withdrawal).</li>
+  </ul>
+
+  <h2>14. International Transfers</h2>
+  <p>The App has no server upload feature for original photos or EXIF/face data, so no such data is transferred abroad. Firebase/AdMob SDKs may process pseudonymous logs on Google infrastructure subject to Google policies (including standard contractual clauses where applicable).</p>
+
+  <hr>
+  <small>This policy may be updated due to feature or legal changes. Previous versions are available on request via email.</small>
+</body>
+</html>
